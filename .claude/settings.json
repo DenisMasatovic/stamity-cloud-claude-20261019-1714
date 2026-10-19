@@ -1,0 +1,202 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)",
+      "Bash(git push --force-if-includes:*)",
+      "Bash(git push origin --force:*)",
+      "Bash(git push origin -f:*)",
+      "Bash(git push origin --force-with-lease:*)",
+      "Bash(git push --mirror:*)",
+      "Bash(git push --delete:*)",
+      "Bash(git push origin --delete:*)",
+      "Bash(git push -d:*)",
+      "Bash(git push origin -d:*)",
+      "Bash(git tag -d:*)",
+      "Bash(git tag -f:*)",
+      "Bash(git tag --delete:*)",
+      "Bash(git tag --force:*)",
+      "Bash(gh release delete:*)",
+      "Bash(gh release delete-asset:*)",
+      "Bash(gh secret delete:*)",
+      "Bash(gh secret remove:*)",
+      "Bash(gh variable delete:*)",
+      "Bash(gh variable remove:*)",
+      "Bash(gh repo edit --visibility:*)",
+      "Bash(gh repo delete:*)",
+      "Bash(gh repo transfer:*)",
+      "Bash(npm unpublish:*)",
+      "Bash(npm dist-tag rm:*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f*)",
+      "Bash(git push * --mirror*)",
+      "Bash(git push * --prune*)",
+      "Bash(git push * --delete*)",
+      "Bash(git push * -d *)",
+      "Bash(git push * +*)",
+      "Bash(git tag * -f*)",
+      "Bash(git tag * --force*)",
+      "Bash(git tag * -d*)",
+      "Bash(git tag * --delete*)",
+      "Bash(gh pr merge * -d*)",
+      "Bash(gh pr merge * --delete-branch*)",
+      "Bash(gh pr merge -d*)",
+      "Bash(gh pr merge --delete-branch*)",
+      "Bash(gh release upload * --clobber*)",
+      "Bash(gh release upload --clobber*)",
+      "Bash(gh repo edit * --visibility*)",
+      "Bash(gh repo sync * --force*)",
+      "Bash(gh repo sync --force*)",
+      "mcp__github__delete_repository"
+    ],
+    "ask": [
+      "Bash(git push --tags:*)",
+      "Bash(git push origin --tags:*)",
+      "Bash(git push --follow-tags:*)",
+      "Bash(git push --all:*)",
+      "Bash(git tag -a:*)",
+      "Bash(git tag -s:*)",
+      "Bash(git tag -m:*)",
+      "Bash(git tag --annotate:*)",
+      "Bash(git tag --sign:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(gh pr ready:*)",
+      "Bash(gh release create:*)",
+      "Bash(gh release edit:*)",
+      "Bash(gh release upload:*)",
+      "Bash(npm publish:*)",
+      "Bash(pnpm publish:*)",
+      "Bash(yarn publish:*)",
+      "Bash(yarn npm publish:*)",
+      "Bash(bun publish:*)",
+      "Bash(gh secret set:*)",
+      "Bash(gh variable set:*)",
+      "Bash(gh repo edit --default-branch:*)",
+      "Bash(gh repo rename:*)",
+      "Bash(gh repo archive:*)",
+      "Bash(gh repo unarchive:*)",
+      "mcp__github__merge_pull_request",
+      "mcp__github__push_files",
+      "mcp__github__create_or_update_file",
+      "mcp__github__delete_file",
+      "mcp__github__update_pull_request_branch",
+      "mcp__github__pull_request_review_write",
+      "mcp__github__create_pull_request_review",
+      "mcp__github__submit_pending_pull_request_review",
+      "mcp__github__update_pull_request",
+      "mcp__github__update_pull_request_state",
+      "mcp__github__update_pull_request_draft_state",
+      "mcp__github__create_branch",
+      "mcp__github__create_pull_request"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-session-start.mjs\"",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-config-tamper-notice.mjs\"",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-cloud-readiness.mjs\"",
+            "timeout": 300
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-pre-tool-use-guard.mjs\" || { s=$?; [ \"$s\" -eq 2 ] && exit 2; echo 'stamity: the pre-tool-use guard could not run; run `stamity sync` where the CLI is installed, else `npx -y @zomarit/stamity@1.15.0 sync`, which needs the npm registry' >&2; exit 2; }"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-person-only-guard.mjs\" || { s=$?; [ \"$s\" -eq 2 ] && exit 2; echo 'stamity: the pre-tool-use guard could not run; run `stamity sync` where the CLI is installed, else `npx -y @zomarit/stamity@1.15.0 sync`, which needs the npm registry' >&2; exit 2; }"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/qa-hooks/decision.mjs\""
+          }
+        ]
+      },
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-unattended-ask-gate.mjs\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__github__merge_pull_request|mcp__github__push_files|mcp__github__create_or_update_file|mcp__github__delete_file|mcp__github__update_pull_request_branch|mcp__github__pull_request_review_write|mcp__github__create_pull_request_review|mcp__github__submit_pending_pull_request_review|mcp__github__update_pull_request|mcp__github__update_pull_request_state|mcp__github__update_pull_request_draft_state|mcp__github__create_branch|mcp__github__delete_repository|mcp__github__create_pull_request",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-person-only-guard.mjs\" || { s=$?; [ \"$s\" -eq 2 ] && exit 2; echo 'stamity: the pre-tool-use guard could not run; run `stamity sync` where the CLI is installed, else `npx -y @zomarit/stamity@1.15.0 sync`, which needs the npm registry' >&2; exit 2; }"
+          }
+        ]
+      }
+    ],
+    "ConfigChange": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-config-tamper-notice.mjs\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-review-gate.mjs\""
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/stamity/stamity-review-gate.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}

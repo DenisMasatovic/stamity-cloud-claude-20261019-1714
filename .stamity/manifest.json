@@ -1,0 +1,764 @@
+{
+  "version": "2.0.0",
+  "generatedBy": "1.15.0",
+  "createdAt": "2026-10-19T17:14:42.626Z",
+  "updatedAt": "2026-10-19T17:14:44.082Z",
+  "tools": [
+    "claude"
+  ],
+  "maturityTier": "solo",
+  "selection": {
+    "items": {
+      "agent": [
+        "creator",
+        "design-quality",
+        "fixer",
+        "implementer",
+        "performance",
+        "researcher",
+        "reviewer",
+        "security",
+        "spec-author",
+        "test-runner"
+      ],
+      "command": [
+        "cmd-ask",
+        "cmd-board",
+        "cmd-debug",
+        "cmd-plan",
+        "cmd-pr-resolve",
+        "cmd-quick",
+        "cmd-rework",
+        "cmd-spec",
+        "cmd-work"
+      ],
+      "rule": [
+        "ai-evals",
+        "api-versioning",
+        "contract-census",
+        "injection-screening",
+        "learnings-schema",
+        "migrations",
+        "question-protocol",
+        "resilience",
+        "secrets",
+        "security-patterns",
+        "testing",
+        "ui-states"
+      ],
+      "skill": [
+        "browser-evidence",
+        "dep-audit",
+        "design-system-detect",
+        "handoff",
+        "learn",
+        "onboard",
+        "qa",
+        "unattended",
+        "verify"
+      ]
+    }
+  },
+  "ledger": [
+    {
+      "adapter": "claude",
+      "artifactId": "creator",
+      "artifactType": "agent",
+      "contentHash": "546ad684acfe9081397255b7afc2421ab782c00c10e06f369c0b99cdd7cff941",
+      "path": ".claude/agents/stamity-creator.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "design-quality",
+      "artifactType": "agent",
+      "contentHash": "31ae607e2661ae3d5f0070592b3fb19e283f6c07c946a91c8040eeef2b49bd2e",
+      "path": ".claude/agents/stamity-design-quality.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "fixer",
+      "artifactType": "agent",
+      "contentHash": "567d8489f1369588cff20b29d39517aeccd19cb86877238a94d21a072e9ed12d",
+      "path": ".claude/agents/stamity-fixer.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "implementer",
+      "artifactType": "agent",
+      "contentHash": "4cb25dbef3eb1a5d748df5adde371f275197a6e2e2604a8f35e3fc2dec75c442",
+      "path": ".claude/agents/stamity-implementer.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "performance",
+      "artifactType": "agent",
+      "contentHash": "3211fe9fb4c5535a7c43e3e829cf9ea11a9f6c381e5bff98cdb053db00eb0294",
+      "path": ".claude/agents/stamity-performance.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "researcher",
+      "artifactType": "agent",
+      "contentHash": "ddd73f1c30b8f2c4010e7b6092553086a0c28e6a87589484ffe7896f4ae1ba23",
+      "path": ".claude/agents/stamity-researcher.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "reviewer",
+      "artifactType": "agent",
+      "contentHash": "0dd91bdec835ee8d8224794ec59c819c58de23004485b01b7a289b34c570d5d7",
+      "path": ".claude/agents/stamity-reviewer.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "security",
+      "artifactType": "agent",
+      "contentHash": "baf297774a6fac2c2b0cbe928dd80755c14187cc7556db69c1cb85e23866d0fd",
+      "path": ".claude/agents/stamity-security.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "spec-author",
+      "artifactType": "agent",
+      "contentHash": "ce02ef8625403a9e493dadace62ce107e5b23290dd280a642991f4ec4e8235d7",
+      "path": ".claude/agents/stamity-spec-author.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "test-runner",
+      "artifactType": "agent",
+      "contentHash": "9c60a69c4a95e43ac05318e6e7ee741e6d2b805c0c1ab80f4d62071f42ae418f",
+      "path": ".claude/agents/stamity-test-runner.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-ask",
+      "artifactType": "command",
+      "contentHash": "2b37498b17fec1f9ae9a80ee201b9804cadfa9303c3e0c38a8dae330d26d6292",
+      "path": ".claude/commands/st-ask.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-board",
+      "artifactType": "command",
+      "contentHash": "6456451b83ef9dcb280e7a1865760fe20fd883ee355f093fc022981cef519a5e",
+      "path": ".claude/commands/st-board.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-debug",
+      "artifactType": "command",
+      "contentHash": "b440d66013d23cb4404b58cf9453a2c68b5205175efdafbf3484d8b7b8f327b2",
+      "path": ".claude/commands/st-debug.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-plan",
+      "artifactType": "command",
+      "contentHash": "05d7d3b3ce9d3804a7a876a30454c1381910e493655c86763fa65d8605bd826c",
+      "path": ".claude/commands/st-plan.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-pr-resolve",
+      "artifactType": "command",
+      "contentHash": "a974a5637e7f0e81da71c5e867a8fbddaa6b2ce001af7abdda69d519bfb845ae",
+      "path": ".claude/commands/st-pr-resolve.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-quick",
+      "artifactType": "command",
+      "contentHash": "502a3b2ab246e8f3dc2902dbbcd21cfde5bf039ce3f96394978f092b2e4c1974",
+      "path": ".claude/commands/st-quick.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-rework",
+      "artifactType": "command",
+      "contentHash": "8838aabbd48948d8cacd1c0fd502a3de9b70de710e5eccb05e93a689917954ee",
+      "path": ".claude/commands/st-rework.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-spec",
+      "artifactType": "command",
+      "contentHash": "0d7ca12879af5849d505544ea9b5cd79b5a10e4f68cee4e45d1fb86dea58375a",
+      "path": ".claude/commands/st-spec.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-work",
+      "artifactType": "command",
+      "contentHash": "698391bdf16902150df5a7bbcff98edf726986a778aa6f92887e4dda346d8e05",
+      "path": ".claude/commands/st-work.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-hook-agent-tool-policies",
+      "artifactType": "infra",
+      "contentHash": "61acfa9a7ed7fdd035dd9fd34939bdd73bb6085baca7bf15174948e2583558b3",
+      "path": ".claude/hooks/stamity/stamity-agent-tool-policies.json"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-hook-cloud-readiness",
+      "artifactType": "infra",
+      "contentHash": "3e0cb4f05778cd276826e9cec1907b69cfaabf142d66d5585d7e685c68dd175e",
+      "path": ".claude/hooks/stamity/stamity-cloud-readiness.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-config-tamper-notice",
+      "artifactType": "infra",
+      "contentHash": "71fa9065ca2f291d53a86d0e620844821833dd8ff3f5ea7c9a8389bc3504306e",
+      "path": ".claude/hooks/stamity/stamity-config-tamper-notice.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-person-only-guard",
+      "artifactType": "infra",
+      "contentHash": "0aa56e86c15ca1f300478a1dbd3a7783e5c0bf7603bc6d28f59cdf602e635307",
+      "path": ".claude/hooks/stamity/stamity-person-only-guard.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-pre-tool-use-guard",
+      "artifactType": "infra",
+      "contentHash": "752f24a46db0da9f933bcb313a00ef8f6b12b8a655241b9257e40f64d9776965",
+      "path": ".claude/hooks/stamity/stamity-pre-tool-use-guard.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-hook-review-gate",
+      "artifactType": "infra",
+      "contentHash": "a410def5d44fde83869b3c2c98db318d470b68a54101e1b20eddfb026f8077b1",
+      "path": ".claude/hooks/stamity/stamity-review-gate.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-session-start",
+      "artifactType": "infra",
+      "contentHash": "c807b92eeff34b3e194a0f7ae843c2945d5663d56cdb937786454a6402df3f31",
+      "path": ".claude/hooks/stamity/stamity-session-start.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-hook-ask-gate",
+      "artifactType": "infra",
+      "contentHash": "40a135c2b3bc84ada8c91863156c26be3197f2492bb7214c016d6d3104d92b4c",
+      "path": ".claude/hooks/stamity/stamity-unattended-ask-gate.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "api-versioning",
+      "artifactType": "rule",
+      "contentHash": "ed3a351d0ff5c6e76547267a3d79a69bd0267af96b659dc91398160921253391",
+      "path": ".claude/rules/stamity-api-versioning.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "contract-census",
+      "artifactType": "rule",
+      "contentHash": "b28259931c7f72a65ef8a252a57bf689f82b4ab3305563415c8d4d1685762532",
+      "path": ".claude/rules/stamity-contract-census.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "injection-screening",
+      "artifactType": "rule",
+      "contentHash": "0a805c3283bcab38708d555508bdae02ab55109da165047692eeec267da4892c",
+      "path": ".claude/rules/stamity-injection-screening.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "learnings-schema",
+      "artifactType": "rule",
+      "contentHash": "2f198bab7c82362db7328339dc10b576cb6694490e94451be40cc150ca4a25d0",
+      "path": ".claude/rules/stamity-learnings-schema.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "migrations",
+      "artifactType": "rule",
+      "contentHash": "fd4062af3c8c6a20ea42528f7ef789a67cb892d2b7c039ff5f856ee73e458440",
+      "path": ".claude/rules/stamity-migrations.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "resilience",
+      "artifactType": "rule",
+      "contentHash": "089a40824f251b2032bc9e2c457ada244dffa6eb3f0ceebe40da15182ee1d26d",
+      "path": ".claude/rules/stamity-resilience.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "secrets",
+      "artifactType": "rule",
+      "contentHash": "074b2f82a2f1711dcc68772ff149eeb3a48487e6170690fb9746715caeb3c2d3",
+      "path": ".claude/rules/stamity-secrets.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "security-patterns",
+      "artifactType": "rule",
+      "contentHash": "38e2df2df4035af00c9e78932e136e1130bfcabc4c6ade96f4e53ec46d859056",
+      "path": ".claude/rules/stamity-security-patterns.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "testing",
+      "artifactType": "rule",
+      "contentHash": "7481e2488317f64c22152c4e40011bf01bf2e941ae7d9eb7b28339040093bbe9",
+      "path": ".claude/rules/stamity-testing.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "ui-states",
+      "artifactType": "rule",
+      "contentHash": "07974fae66dbff2fff850084ff17447faa1cc3ce0a79fd128fbac77d47e69306",
+      "path": ".claude/rules/stamity-ui-states.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-settings",
+      "artifactType": "infra",
+      "coOwned": {
+        "createdFile": true,
+        "elements": {
+          "/hooks/ConfigChange": [
+            "242925ec7f7b2a4898a0b7157d96f529525f9bb236b66d876049fbc2643223fe"
+          ],
+          "/hooks/PreToolUse": [
+            "8cf26b4706d691599cb57cf4cccbe987007d38bf1443f2f5ca9ff29596f88dfb",
+            "ae76b0a9335096a2ecc2832d28d259e03b2aff83814c3a5b1fff898e3ee7dd92",
+            "c5518f158bb0a389ff497c9c090d9ebe15bd1473e88e494e7a1d1f9a2aa34ce7",
+            "7116ff1c12b274d4580c1710f1a401287b40f00f0bfcea09c9dd7503a6ad9f3b",
+            "743b328997643d059bf4bcc1fe908849155eda38712ef81d57adfdb35b3a83d8"
+          ],
+          "/hooks/SessionStart": [
+            "e49db8343a3a390290586dd9dc1a9a3b7f60e1678d5da09370ea6bd981ef374b",
+            "242925ec7f7b2a4898a0b7157d96f529525f9bb236b66d876049fbc2643223fe",
+            "0887a0314dbd97d70ede91167aa20d42f3b23252514eb6a6d323eba42e749092"
+          ],
+          "/hooks/SubagentStop": [
+            "c27496945412cb174751fafa4a1a045c8f3cffde7b635278dfcceba631129711"
+          ],
+          "/hooks/TaskCompleted": [
+            "c27496945412cb174751fafa4a1a045c8f3cffde7b635278dfcceba631129711"
+          ],
+          "/permissions/ask": [
+            "ca84366a30fd7f1bc883e0465ab636c2144b963dca815129fe0dbb12ea5834dd",
+            "7c33de7b70cba5266687d64814be34fa60099bd2cc1cc9515159e0a8658d8759",
+            "19c1788bad45d0000055fea0bc721a9cc604e2ac911057af7bf0b081edc210f9",
+            "f9274a243142a7259a119b446ad8744db126a5c143453b84e81fdbe2ad7b63d4",
+            "a4b878473e23ce0929fdda9207ef40d0be440067d9a280437072a7173be5a987",
+            "6f1ee4765a16ae3395d8aae865962a2b0b1b226a1e5ee4519d2203fd9c75d9a0",
+            "06fa339caa3b17f740c5a8ebd812d4f0e853ddec0835f6b6c014406610068493",
+            "173c3692d6a89786a01be340449bc17199c2a2801cfae3056d4efc0362b0d5fb",
+            "697d142678b38374b87c312931c99e68c93c3d9c6d28ed08ee160c7f567f5b53",
+            "5ee7ae2110712ecd828bdbed1df9c54ca150619593a5d6491a21a4a97b577ee8",
+            "e7cfc1892d7592a248535359ad21cd9b0e381e33b7f1016f6482640a8ddd512c",
+            "7d94ae02abc1c3f2addbd3e5746e8abb8bb18f048e1651a2f340e0e7c5adbc0d",
+            "97e4da87f08f7b2f5da905bcf4e32b83377dbcc7afc1b8c9200481f0c5d8ee8b",
+            "4fd1e0fdf617559dc739ca949bd2f7d443190be4580e906b3f13014df3f98b9a",
+            "389b135769455e52b81f966437e4902eb91b12bf916d50878c1696e6a89a78e8",
+            "6646d1af3b8c8d56c43fdff25fc5c8820f66d1cd816bda9ac7669c7da5cdcad6",
+            "87077bc1c0a044eb78aadbe011064a694d6cee6192c7b8f3945db08de040a2a4",
+            "9b9199de50b79dbc28450981ede9e90fa6de8b7532aa09bdce30854d6adcf1d5",
+            "d8e5e94ddb94b74de0f163eae53492628f117bfa7b3973b24d87a1d0ef45624e",
+            "4795dc2f71dd00cd86df1299c1e7a037d76ad43594e9da22562bc29cf11a8198",
+            "d3d3b3344b8832e30dba85fa5abbbaf09b2f58f559402812c464aaf3994380e5",
+            "2ec2e0cc9e8edc7a3e1b868ce6fdf09318129fe1fa05dfade98b2b8e1d5808c0",
+            "8e05d15edbca24d724c6b39b34320ad1a708f2e74242f95fea63478adafbb7c9",
+            "db2aea76916451712deb790f6a833372dc0615f0f15ddb5df4407a84138da74d",
+            "0d6b4ecb45301c91f9f2b33620b02062ee68d6c749380864e154d5dfc88b9dcf",
+            "db71dad285636a0f11c5a0fef5070b61a1e5480b14de80322dd906c7b2ddc6e8",
+            "ce29b600dee641a17d6ccf592e1409f0a1d8b07428860a1b579907af826059db",
+            "683813e64b908e01ddfc36d352fa86eee9a17c53c9f38dd9496516f8778f526f",
+            "d402450a7832cc644e66604ea1d2426d9ed1c2300cdb7f9419bf9edc85e040b1",
+            "56b29d8b69f59f5dace346c00701e7b32ddf6fe70a2c272cfd7b5b9915f779c8",
+            "6e333179d4ace6453481c2611edc2ec61df7dacef0cda72eb59085f43a43b629",
+            "45acea80d638d4ea565bc93294364ed7432dcc710619b7b300d0ca573bd8c064",
+            "0e79f7ce3e9ec30028938fbad61a899980d7bb022b73c5c696436eeba760e70f",
+            "d31b505c2edb31c6070ab2829c51691c6c132e89bfdc33be2457cfe9b3656fcd",
+            "ab77f7738cc98a102c9a7d2b4b092c77727600b431880f0e2e0ac14eba1d7f0a",
+            "4cb924fc957429ce07dcb547f956ee5a379c5dac1bbd2016cabea9a0e4af7b11",
+            "55c7e93117c3d2c4319b2f8ccb501225e94ebac3cd13b30fcf67f9a2c9b0199f",
+            "6668040568a65d9db76545e03a8cc55822093297612709dc6c37f1dfe3f24225"
+          ],
+          "/permissions/deny": [
+            "16d0bdb489da12c0dddedd42b30f5f98ff0280a5976c1534bf1dc8bf3b690762",
+            "d88442ae36c0123bf32f50ec1a070cf0490fcb5fb9c77bc672ec7b9a65ed2403",
+            "201bcca094e46a7e737c3689fd3bf93487e1e51c092abfb2b8ba9739f8e9a3a5",
+            "368463ca697249f2c2577c6eecc47abc99616aeb455bd3a443d5a155e32880f9",
+            "acd79bff5783e7e00973c444818b190886053822eaf59e7e04556e2a022b94c0",
+            "cf40fdf4bf58abaa63e4840c206a89b6c1264fa6454c7dc4c4ec65e70f27bc46",
+            "b8f2883ff521a8c018c5ad2ce434eee1f2c72b0ab8463f177925f4f6a2b60972",
+            "7f5991191b081e566bab017c962dafc3f672ed42eff720b92c23f758ef4a97ea",
+            "582b49a37a23f3270de50b369826df7e4573b6d0ecc41a03ddbc1723015f10f9",
+            "3a31cb162ade931c7b434025425826dd1f4e14cfa6da6168fcc0a3cdd5ba5bf0",
+            "0a391971a11e6ecf879cdf9d32ee384e59eb30b25eed186311b53ca471ebd330",
+            "199cb12d9c3a25efe0227a99ff689124e4dde9ac3cc6958a9925f048165f5761",
+            "9155f72a779090cf3d76a737735b3b6905704b6a68af22e5e7e3892157dd30b1",
+            "41cd0afb6146db6339dd0906e07096b927372f4f0176e65f5ba3e28bebe72eaa",
+            "2adfbf362752f7c61602990d2e574d2ad2dd2ce396faa0b10537b6dc0be6f6b9",
+            "f4a0dd0e059b19f677e0917d994db1169b86c6253af2804f9d3596ddfdf674d3",
+            "fabc8b965c79cdcb253b02190c0f9d8fddcd623ab1a709678a7347145331a3b1",
+            "a4660ce3d99e7ec835e646d76b5667cd785337289d020e32c6e396ec76982901",
+            "72b731a095a2a99e7500a876e3059d807dbd57902be3ac9da7be0729e524ec8b",
+            "c6368b0b557dc7eee02af85a8333116b9bbed0d69fd4d0645d84e3d1ee9a8f7f",
+            "5e20568dedf592ec68a2a2b049a0b4f3f5fd5bcbd5a6aa6e5ad7729b17c07f9a",
+            "b2a8a227a746489bce0b720178329982a4d4d2355f2b02fc658b9bcc55168b37",
+            "9a2f438f8f1ec1009845cf69862af9781f3d7c11384715353583a1fe14408def",
+            "f5d8f1f957a515b66206e1459e0fcd003705cf464b411ced998ba24d4e3f24ca",
+            "d76e4207deb1c0bfddc0b3d41a511def8b26a8f7bebd403db004687a0174ddd8",
+            "b8076c71e8969a5ba59e9ef8b92edfec06edf449d5cc4816d352eb7fa40d3acc",
+            "2304812f38fa99b0619204589cab1d49c1dc0e3cfbc9e4e0e3789e8497bd5f35",
+            "8456d8279aa1c174ccce8064f4c81d9e35c866140d347230cf2e83b87495ba47",
+            "833bca67592071f8e4436a0ade1f6334b9d3f4806b6848b0032b88f7100e6e16",
+            "5689446fbb9adbab265eeba4808ab336930d7e4bb1400e356471049f74632d14",
+            "cb1a79da96b828661d4854d1be62a0ea7e9d5b3c6e6195c26c5c746d33c5efc7",
+            "ae52f70003070d672353397e1b7ba9b432c76326b9978bbdc92c9ca7cbb4627f",
+            "ddee424d5af11c163b68ccc116da82507b61ac7e40da61b65d2e6316f5f94a15",
+            "0adf9cc24556275870869518eec49eed75ecac39d34f77dcd840eada1eafe393",
+            "fa87d01b7b0bbd0691a09775e391ce4af41da60f8a58632fe179ec2cd2d13a0e",
+            "a3c9c2b02271561e1e64044541214b3c296d5902eb7a2ef58e61dbbeeca8574a",
+            "540976e92e8a072e25ead4bf7e98ef35339e58a18872a5f35887885b8bd403ff",
+            "a0b28b4886b8c66260712583d24273d7a0628dd72303de3ed9660215187a997e",
+            "edb07be2e1ef4354da6beca8d23a742f48913584d2ecc91c3d42c10f58fd018a",
+            "ab19f034855bce73f6c0b2b8a07c09fc9e9c51fcf5890a3c88b11fc9d47d8f9e",
+            "80f929542a67fbb320204714820506f5010209f12abea577692ba9ec53dcad48",
+            "989e3d72cdf890c046a4b64c2483ce6147966ad25f602edc22dc61e2039a06d6",
+            "a259f57432e50d737657ccdfcb1fbd204b5e5d1cb51d5383180ffe9089a84a8c",
+            "d89132760ec95e2398e2275c0facb14d36ac44adfe7d2e873162abd826cd9017",
+            "76d37971e12cfe00d79126ef46e357ebb69a924327e97ab4fa39a06160c0d163",
+            "1e958433e843eaddbb246d65b99a147e0d3bbe3224bd47665be98dca83da5e39",
+            "0f828fd7d9f7fdc47f6bd73cfabe3ba586c8dab1cd167419275669e8f58a55a0",
+            "e9178df111f6b1c2950e81b2b39c9c9019822c3815f270dca8c1b226f59f06a6"
+          ]
+        }
+      },
+      "contentHash": "1583c6849a66e07e5ed3f0742623234df32a35eb57a5679f01c6871b5777933d",
+      "path": ".claude/settings.json"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "browser-evidence",
+      "artifactType": "skill",
+      "contentHash": "a4a40651590d8e03ae621c8a5ee7f71e904aeb87e54cff23ae1b2a4d26fd21c7",
+      "path": ".claude/skills/st-browser-evidence/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "browser-evidence",
+      "artifactType": "skill",
+      "contentHash": "b448baafcaa2f1b0d6c396b1ba98d733fd4424c546b545797ade81ab87efe760",
+      "path": ".claude/skills/st-browser-evidence/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "dep-audit",
+      "artifactType": "skill",
+      "contentHash": "631e9365176633f718682b9049c3315ce5f3457af993f92c7e77442192130ba0",
+      "path": ".claude/skills/st-dep-audit/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "dep-audit",
+      "artifactType": "skill",
+      "contentHash": "03b9f0b720a98145fda8584c40f0a54f56ae18c213ca7d42e9801dcac5c0abde",
+      "path": ".claude/skills/st-dep-audit/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "design-system-detect",
+      "artifactType": "skill",
+      "contentHash": "797494d53ab3a5cfb0f866ed14c7cf4002a8fb4a943004f425b57ae845e3a000",
+      "path": ".claude/skills/st-design-system-detect/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "design-system-detect",
+      "artifactType": "skill",
+      "contentHash": "91065c090283437485a15f7575527d1b64972caf0432026f5ede3b7621a24573",
+      "path": ".claude/skills/st-design-system-detect/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "handoff",
+      "artifactType": "skill",
+      "contentHash": "f6d0b06b363633e48ba215088c07716963e449af36c5fdba0aab436d7d93b8e8",
+      "path": ".claude/skills/st-handoff/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "handoff",
+      "artifactType": "skill",
+      "contentHash": "fc1585c3bab1d2332600c62df9beda798b887427cc568b0d075984ea919956dc",
+      "path": ".claude/skills/st-handoff/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "learn",
+      "artifactType": "skill",
+      "contentHash": "86db6139908ba601177ee7160b9e946777c8d6acb7f6cba2bb18a6cf91b422dd",
+      "path": ".claude/skills/st-learn/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "learn",
+      "artifactType": "skill",
+      "contentHash": "15a01aa4b19843baaeb6203dbdbc5f4998c20616ebdf39af11198ecf71df57b5",
+      "path": ".claude/skills/st-learn/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "onboard",
+      "artifactType": "skill",
+      "contentHash": "79ff61bf39ee5bf59d9f1c2b2af2f42e7b83b73276e4cc6bce09019c26961187",
+      "path": ".claude/skills/st-onboard/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "onboard",
+      "artifactType": "skill",
+      "contentHash": "5bc57a6fd27440d5f4a4460065a831d281365b8e80cd0ae412e0488a7ace9351",
+      "path": ".claude/skills/st-onboard/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "qa",
+      "artifactType": "skill",
+      "contentHash": "eeddea1470277a88d24b5d2fd30e1e691806e3d7d36df0ca0b37f11575c04395",
+      "path": ".claude/skills/st-qa/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "qa",
+      "artifactType": "skill",
+      "contentHash": "3757a9476321ed7a8e1ea39a8ea0d51eb0bd7ea7f67969c54f545099d5be20e1",
+      "path": ".claude/skills/st-qa/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "unattended",
+      "artifactType": "skill",
+      "contentHash": "5bcef28357f4c489a36c70e08e4b03c7b890bcbd1b66afef56e099f48bcd449d",
+      "path": ".claude/skills/st-unattended/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "unattended",
+      "artifactType": "skill",
+      "contentHash": "09cd1ea5e109f80be04b19f1b1e43602b6aad4972fc6e248d6e355a1c6e72df1",
+      "path": ".claude/skills/st-unattended/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "unattended",
+      "artifactType": "skill",
+      "contentHash": "36f0a28346c24a899d0f27e6f39070964cc25f2ebce886d0b21b99cc8d277d8d",
+      "path": ".claude/skills/st-unattended/references/chains.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "unattended",
+      "artifactType": "skill",
+      "contentHash": "4aec628cd2413dbdf6f5eb1eefc75cac4abf69b890eb2a999f5aba3bb8ff51f4",
+      "path": ".claude/skills/st-unattended/references/cloud.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "75897507e02d19730f510134ba001062e460ba3411e4833703a212a57354b9fc",
+      "path": ".claude/skills/st-verify/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "0f47c7e1746d88707b7b28e6a27c0acfe00de8a2a1e74b6d38ce63f325df7b13",
+      "path": ".claude/skills/st-verify/agents/openai.yaml"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "dae121ef7399c041d78db0253b8cb2ce5d9290b904156b24079c0a5d7e9e3e9f",
+      "path": ".claude/skills/st-verify/references/enhancability.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "ab762163c51730a01ac03d7c4a9f86e491ba6d56589ef6a0ca9b4e4804e1c22d",
+      "path": ".claude/skills/st-verify/references/maintainability.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "9259bd84e7edea7b500b4208a75989318491278184ae4bee3427f8a6194da1bf",
+      "path": ".claude/skills/st-verify/references/performance.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "187ef7d6874e4b7dcc8b429fed68f61556ae79494cfaea6b14b43b0bf24ccc9c",
+      "path": ".claude/skills/st-verify/references/product-spec.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "1196b9341815aebc68577bc145d2e4f51895a1f47cf655b32b1e1ebe9bc3d979",
+      "path": ".claude/skills/st-verify/references/reliability.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "a105edb8db134eda643deb1873a98ab42f98bce03c6b163b38807cc6cee73b1d",
+      "path": ".claude/skills/st-verify/references/scalability.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "daf9429a08a2605a5e2513a3e8e0aaaa1fbcfb2d9e4a838b656c5f708f2569a6",
+      "path": ".claude/skills/st-verify/references/security.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "55ec48ee05d08f6391e4e2a1070d2a7174c5884efec86767121bd27eba529867",
+      "path": ".claude/skills/st-verify/references/testability.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "738e557b1541bf4e2db3713e2deb4b9ffcfee9ecfb3fa5af87258466f185c2d1",
+      "path": ".claude/skills/st-verify/references/ui.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "0ac37489423de3cd86642e1947c2e42f9b7e16a1722c12ea5ada7c438bc87e21",
+      "path": ".claude/skills/st-verify/references/ux.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "verify",
+      "artifactType": "skill",
+      "contentHash": "742e08467fc02dd92853bc5634dd7e660c580ce386adf5d6c4f3b36b3e9a10c2",
+      "path": ".claude/skills/st-verify/scripts/spec-plan-coverage.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "ai-evals",
+      "artifactType": "rule",
+      "contentHash": "803c4a405842094e687a311c73b7754089cdd50496b0427080cd59a63fc17968",
+      "path": ".claude/skills/stamity-ai-evals/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "question-protocol",
+      "artifactType": "rule",
+      "contentHash": "e7d2c88fe5dbb92ccd0cfc8fac67e968df27c438af9171360ffc4562caabc8f4",
+      "path": ".claude/skills/stamity-question-protocol/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "agent-tool-policies",
+      "artifactType": "infra",
+      "contentHash": "61acfa9a7ed7fdd035dd9fd34939bdd73bb6085baca7bf15174948e2583558b3",
+      "path": ".stamity/generated/agent-tool-policies.json"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-cloud-readiness",
+      "artifactType": "infra",
+      "contentHash": "ce054c62f2fcaf70b97319a55cbf9b9ad16698ba5216b5f66de1d5bebf804814",
+      "path": ".stamity/generated/hooks/claude/stamity-cloud-readiness.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-config-tamper-notice",
+      "artifactType": "infra",
+      "contentHash": "71fa9065ca2f291d53a86d0e620844821833dd8ff3f5ea7c9a8389bc3504306e",
+      "path": ".stamity/generated/hooks/claude/stamity-config-tamper-notice.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-person-only-guard",
+      "artifactType": "infra",
+      "contentHash": "a5922d7c23fea7aa654edc9d743c1ff973d3cd6fe8aeeeb7b99ca1f18d0a6bce",
+      "path": ".stamity/generated/hooks/claude/stamity-person-only-guard.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-pre-tool-use-guard",
+      "artifactType": "infra",
+      "contentHash": "a9cb6702e22397eab72daa1d1395d835b4910ab7dc0ca59e9aaf612982686a60",
+      "path": ".stamity/generated/hooks/claude/stamity-pre-tool-use-guard.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-review-gate",
+      "artifactType": "infra",
+      "contentHash": "609458462c3cfdbe9b08d018ff5e4df50b7725bdcf6a9fd2eb9d2a548cd2dbd7",
+      "path": ".stamity/generated/hooks/claude/stamity-review-gate.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "stamity-session-start",
+      "artifactType": "infra",
+      "contentHash": "1111332a1630ed4dcb42e421b2326c5dd423a358e3c92bf8cb367e212a7a996d",
+      "path": ".stamity/generated/hooks/claude/stamity-session-start.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-ask-gate",
+      "artifactType": "infra",
+      "contentHash": "713d5305ea637d789a5441bece982f56d94ee69a10421a94a504acc694cfcec8",
+      "path": ".stamity/generated/hooks/claude/stamity-unattended-ask-gate.mjs"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-model-map",
+      "artifactType": "infra",
+      "contentHash": "d8b019734f996874130a675b78705669a3a4f121ed8a4e692c913206897bc280",
+      "path": ".stamity/generated/models/claude.json"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "charter",
+      "artifactType": "infra",
+      "contentHash": "c8783d75a2abff2becacd30b71cbf58a668baee3259fa087eb532cb72c3c08ab",
+      "path": "AGENTS.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "claude-md-bridge",
+      "artifactType": "infra",
+      "contentHash": "015e1836b13bd7ba27e4d74165b0ba58ffd50620881ca169f16c06cde31ecb91",
+      "path": "CLAUDE.md",
+      "stampedVersion": "1.15.0"
+    }
+  ],
+  "hooks": {
+    "userHooksDir": "qa-hooks"
+  },
+  "detected": {
+    "ciProviders": [],
+    "languages": [],
+    "linters": [],
+    "testFrameworks": []
+  }
+}
