@@ -1,0 +1,16 @@
+run-contract: 1
+plan: docs/plans/001-cloud-check.md
+base: 2aa22e861090aeabed5b36ab4c464b793be2221c
+acceptance: |
+  `greet` returns the greeting its plan names, its test passes, and the run ends on one draft
+  pull request whose body is the morning list.
+scope:
+  in: [src/greet.mjs, test/greet.test.mjs]
+  out: [run-contract.yml, package.json]
+prerequisites: []
+budget:
+  stop-by: "2026-10-20T17:14:42Z"
+  max-units: 1
+answerer: "@DenisMasatovic"
+preview: stop
+move: off
